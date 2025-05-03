@@ -61,12 +61,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             with urllib.request.urlopen(req) as res:
                 result = json.loads(res.read().decode("utf-8"))
                 reply = result["choices"][0]["message"]["content"]
-                # ui.message(reply)
+                ui.message(reply) # Speak the reply for screen reader users
                 gui.messageBox(
                     reply,
                     "GPT-4 Response",
                     gui.wx.OK | gui.wx.ICON_INFORMATION
-                )
+                ) # Show popup for additional accessibility/visibility
 
         except Exception as e:
             # Handle network or API errors
