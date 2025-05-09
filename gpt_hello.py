@@ -64,7 +64,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
                 ui.message(reply) # Speak the reply for screen reader users
                 gui.messageBox(
                     reply,
-                    "GPT-4 Response",
+                    "GPT-3.5 Response",
                     gui.wx.OK | gui.wx.ICON_INFORMATION
                 ) # Show popup for additional accessibility/visibility
 
